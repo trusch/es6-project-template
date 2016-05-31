@@ -1,8 +1,8 @@
 {
-  "name": "es6-commandline-project",
+  "name": "es6-project-template",
   "version": "1.0.0",
-  "description": "",
-  "main": "build/bundle.js",
+  "description": "a basic es6 project template with babelify and linting",
+  "repository": "https://github.com/trusch/es6-project-template",
   "scripts": {
     "build": "node node_modules/eslint/bin/eslint.js src && (rm -rf build; mkdir build; browserify src/main.js -o build/bundle.js -t babelify);",
     "lint": "node node_modules/eslint/bin/eslint.js src || true"
