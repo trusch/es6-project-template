@@ -4,12 +4,16 @@
   "description": "",
   "main": "build/bundle.js",
   "scripts": {
-    "build": "rm -rf build; mkdir build; browserify src/main.js -o build/bundle.js -t babelify"
+    "build": "node node_modules/eslint/bin/eslint.js src && (rm -rf build; mkdir build; browserify src/main.js -o build/bundle.js -t babelify);",
+    "lint": "node node_modules/eslint/bin/eslint.js src || true"
   },
   "author": "Tino Rusch",
   "license": "MIT",
   "devDependencies": {
+    "babel-eslint": "^6.0.4",
     "babel-preset-es2015": "^6.9.0",
-    "babelify": "^7.3.0"
+    "babelify": "^7.3.0",
+    "eslint": "^2.11.1",
+    "eslint-plugin-babel": "^3.2.0"
   }
 }

@@ -1,8 +1,11 @@
 export default class Greeter {
-  constructor(message){
+
+  constructor(message) {
     this.message = message;
   }
-  greet(){
+
+  greet() {
     console.log(this.message);
   }
+
 }
